@@ -6,7 +6,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import * as MediaLibrary from 'expo-media-library'
 import { captureRef } from 'react-native-view-shot'
 import domtoimage from 'dom-to-image'
-
+import 'expo-dev-client'
 
 import ImageViewer from './components/ImageViewer'
 import Button from './components/Button'
