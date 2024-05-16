@@ -7,6 +7,7 @@ import * as MediaLibrary from 'expo-media-library'
 import { captureRef } from 'react-native-view-shot'
 import domtoimage from 'dom-to-image'
 import 'expo-dev-client'
+import { registerDevMenuItems } from 'expo-dev-menu';
 
 import ImageViewer from './components/ImageViewer'
 import Button from './components/Button'
@@ -17,6 +18,16 @@ import EmojiList from './components/EmojiList'
 import EmojiSticker from './components/EmojiSticker'
 
 const PlaceholderImage = require('./assets/images/background-image.png')
+
+//Customised button in debugging setting
+const devMenuItems = [
+  {
+    name: 'My Custom Button',
+    callback: () => console.log('Hello world!'),
+  },
+];
+
+registerDevMenuItems(devMenuItems);
 
 export default function App() {
   const [selectedImage, setSelectedImage] = useState(null)
